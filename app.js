@@ -46,4 +46,9 @@ client.on('messageCreate', async(message) =>
     }
 });
 
+if(process.env.PRODUCTION == 1)
+{
+    keepAlive();
+}
+
 client.login(process.env.TOKEN);
